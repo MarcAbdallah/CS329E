@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>Website Registration</title>
+<link rel="stylesheet" type="text/css" href="./register.css">
+</head>
+
+<body class="vsc-initialized">
+<h1>Register</h1>
+<form id="registration" action="" method="post">
+	<label for="username">Username:</label>
+	<input type="text" name="username" id="username" size="25"><br>
+	<label for="pw">Password:</label>
+	<input type="text" name="pw" id="pw" size="25">
+	<label for="pw2">Confirm Password:</label>
+	<input type="text" name="pw2" id="pw2" size="25"><br>
+	<input type="submit" class="button" name="register" value="Register">
+	<input type="reset" class="button" value="Clear">
+</form>
+<script type="text/javascript">
+   document.getElementById("registration").register.onclick = validate;
+   
+function validate ()
+   {
+     let elt = document.getElementById("registration");
+     let username = elt.username.value;
+     let pw = elt.pw.value;
+     let pw2 = elt.pw2.value;
+	   if (username.length < 6 || username.length > 10 || pw.length < 6 || pw.length > 10 || pw != pw2){
+     	window.alert("Invalid Input");
+	return false;
+     }
+
+     let re = /[a-z A-Z 0-9]+/;
+     let dig = /^\D/;
+     let repw = /[a-z A-Z 0-9]+/;
+     let re2 = /[a-z]+/;
+     let re3 = /[A-Z]+/;
+     let re4 = /[0-9]+/;
+     if (username.match(re).toString().length != username.length || pw.match(repw).toString().length != pw.length){
+     	window.alert("Invalid Input");
+	return false;
+     }
+
+     if (pw.match(re2) == null || pw.match(re3) == null || pw.match(re4) == null || username.match(dig) == null){
+     	window.alert("Invalid Input");
+	return false;
+     }
+	window.alert("Passed Validation");
+	return true;
+     
+
+     
+     }
+   
+
+
+</script>
+
+
+
+</body></html>

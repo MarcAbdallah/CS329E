@@ -1,0 +1,64 @@
+body {
+	background-color: #aaaaaa
+}
+
+
+.index {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+caption {
+	font-size: large;
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+thead tr {
+    background-color: #CC5500;
+    color: #ffffff;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px 15px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:nth-of-type(odd){
+    background-color: #dddddd
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #CC5500;
+}
+
+a:visited {
+    color: #CC5500;
+}
+
+a:hover {
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HWK 16</title>
+</head>
+<body>
+    <h1>Registration</h1>
+    <form action="./register.php" method="POST">
+        <label for="user">User Name: </label>
+        <input type="text" name="user" id="user" onchange="ajax()"><br>
+        <label for="pw">Password: </label>
+        <input type="password" name="pw" id="pw"><br>
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+    </form>
+    <script type="text/javascript">
+        var xhr;
+        if (window.ActiveXObject) {
+            xhr = new ActiveXObject ("Microsoft.XMLHTTP");
+        }
+        else if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest ();
+        }
+
+        function ajax(){
+            var user = document.getElementById("user").value;
+            if (user == null){return;}
+            var url = "./ajax.php?user=" + escape(user);
+            xhr.open("GET", url, true);
+            xhr.onreadystatechange = updatePage;
+            xhr.send(null);
+        }
+
+        function updatePage(){
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    var response = xhr.responseText;
+                    if (response !== ""){
+                        window.alert(response);
+                    }
+                }
+            }
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>HWK 8</title>
+	<link rel="stylesheet" href="./hwk8.css">
+</head>
+<body class="vsc-initialized">
+<h1>Galaxies</h1>
+<script type="text/javascript">
+  let space = new Array();
+  space[0] = "./NGC6217.jpg";
+  space[1] = "./M51.jpg";
+  space[2] = "./InteractingGalaxies.jpg";
+  space[3] = "./NGC1300.jpg";
+  space[4] = "./M104.jpg";
+  space[5] = "./GalaxyCluster.jpg";
+
+  let captions = new Array();
+  captions[0] = "NGC 6217";
+  captions[1] = "M 51";
+  captions[2] = "Interacting Galaxies";
+  captions[3] = "NGC 1300";
+  captions[4] = "M 104";
+  captions[5] = "Galaxy Cluster";
+
+  let index = Math.floor (Math.random() * space.length);
+  var img = document.createElement("img");
+  img.src = space[index];
+  img.alt = captions[index];
+  img.width = 640;
+  img.height = 480;
+  var caption = document.createElement("div");
+  caption.innerHTML = captions[index];
+  document.body.appendChild(img);
+  document.body.appendChild(caption);
+  document.writeln ("<br /><br />");
+</script>
+
+
+
+
+</body></html>

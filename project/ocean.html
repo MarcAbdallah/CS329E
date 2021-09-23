@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html><head>
+    <title>Ocean Pollution</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./ocean.css">
+</head>
+<body class="vsc-initialized">
+    <div id="banner">
+        <div id="green-team">Ocean Pollution</div>
+        <div id="class-name">CS329E Summer 2021</div>
+        <a href="./homepage.html">
+            <img id="logo" src="./GTlogo.png" alt="GTlogo">
+        </a>
+        <div id="background-banner"></div>
+    </div>
+    
+    <div id="navigation">
+        <div id="footprint" class="nav" onclick="location.href='./footprint.php'">My Carbon Footprint</div>
+        <div id="ocean" class="nav" onclick="location.href='./ocean.html'">Ocean Pollution</div>
+        <div id="ice" class="nav" onclick="location.href='./ice.html'">Ice Sheets</div>
+        <div id="urban" class="nav" onclick="location.href='./heatislands.html'">Urban Heat Islands</div>
+        <div id="animal-plant" class="nav" onclick="location.href='./aplife.html'">Animal/Plant Life</div>
+        <div id="human-health" class="nav" onclick="location.href='./humanhealth.html'">Human Health</div>
+    </div>
+
+    <div id="main">
+        <div id="top" class="grid-item">
+            <h2>Statistics</h2>
+            <div class="slideshow-container">
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                  <img src="ocean-pollution1.jpg" alt="Ocean Pollution">
+                </div>
+              
+                <div class="mySlides fade">
+                  <img src="ocean-pollution2.jpg" alt="Ocean Pollution"> 
+                </div>
+              
+                <div class="mySlides fade">
+                  <img src="ocean-pollution-graph.png" alt="Ocean Pollution Graph">
+                </div>
+              
+                <div class="mySlides fade">
+                    <img src="ocean-pollution-graph2.svg" alt="Ocean Pollution Graph">
+                </div>
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+              <br>
+              
+              <!-- The dots/circles -->
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+
+            <div id="statistics" class="content">
+                <ul>
+                    <li>100 million marine animals die each year from plastic waste</li>
+                    <li>Plastics take 500-1000 years to degrade</li>
+                    <li>300 Million tons of plastic gets created yearly</li>
+                    <li>About 13,000 tons of plastic are ingested by North Pacific fish yearly</li>
+                    <li>There are an estimated 5.25 trillion pieces of plastic in our oceans</li>
+                    <li>From 1950-1998, over 100 nuclear blast tests occurred in our oceans</li>
+                    <li>90% of the global ocean debris comes from 10 rivers alone</li>
+                    <li>Coastal water contamination is responsible for 250 million clinical cases of human diseases annually</li>
+                </ul>
+                <em>Courtesy of <a href="https://www.condorferries.co.uk/marine-ocean-pollution-statistics-facts">Condor Ferries</a></em>
+
+            </div>
+        </div>
+        <script src="ocean_slides.js"></script>
+
+        <div id="contributors" class="grid-item">
+            <h2>Largest Contributors to Ocean Pollution</h2>
+            <div class="flex-container">
+                <img src="./china.png" alt="China">
+                <img src="./indonesia.png" alt="Indonesia">
+                <img src="./philippines.png" alt="Philippines">
+                <img src="./vietnam.jpg" alt="Vietnam"> 
+            </div>
+            <div class="flex-container">
+                <div><p class="content">China</p></div>
+                <div><p class="content">Indonesia</p></div>
+                <div><p class="content">Philippines</p></div>
+                <div><p class="content">Vietnam</p></div>
+            </div>
+        </div>
+
+        <div id="events" class="grid-item">
+            <h2>Biggest Oil Spills</h2>
+            <div class="flex-container">
+                <div onclick="oilspill(1)"><p class="content">Lakeview Well, 1910</p></div>
+                <div onclick="oilspill(2)"><p class="content">The Gulf War, 1991</p></div>
+                <div onclick="oilspill(3)"><p class="content">Deepwater Horizon, 2010</p></div>
+            </div>
+        </div>
+        
+        <div id="details" class="grid-item">
+            <h3>Details</h3>
+            <p class="content" id="oil_spill_details">Click on one of the events above to see details</p>
+        </div>
+
+        <script src="./oil_spill.js"></script>
+    </div>

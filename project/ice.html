@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html><head>
+    <title>Ice Sheets</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./ice.css">
+</head>
+<body class="vsc-initialized">
+    <div id="banner">
+        <div id="green-team">Ice Sheets</div>
+        <div id="class-name">CS329E Summer 2021</div>
+        <a href="./homepage.html">
+            <img id="logo" src="./GTlogo.png" alt="GTlogo">
+        </a>
+        <div id="background-banner"></div>
+    </div>
+    
+    <div id="navigation">
+        <div id="footprint" class="nav" onclick="location.href='./footprint.php'">My Carbon Footprint</div>
+        <div id="ocean" class="nav" onclick="location.href='./ocean.html'">Ocean Pollution</div>
+        <div id="ice" class="nav" onclick="location.href='./ice.html'">Ice Sheets</div>
+        <div id="urban" class="nav" onclick="location.href='./heatislands.html'">Urban Heat Islands</div>
+        <div id="animal-plant" class="nav" onclick="location.href='./aplife.html'">Animal/Plant Life</div>
+        <div id="human-health" class="nav" onclick="location.href='./humanhealth.html'">Human Health</div>
+    </div>
+
+    <div id="main">
+        <div id="main-top">
+                <div id="slides">
+                    <div class="slideshow-container">
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                        <img src="./greenland.jpg" alt="Greenland">
+                        </div>
+                    
+                        <div class="mySlides fade">
+                        <img src="./arctic.jpg" alt="Arctic">
+                        </div>
+                    
+                        <div class="mySlides fade">
+                        <img src="./antarctic.jpg" alt="Antarctic">
+                        </div>
+                    
+                        <div class="mySlides fade">
+                            <img src="./melting.png" alt="Melting Sheets">
+                        </div>
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+                    
+                    <!-- The dots/circles -->
+                    <div class="dot-container">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+                </div>
+                <script src="ocean_slides.js"></script>
+                <div class="grid-item" id="causes">
+                    <h2>Causes and Effects of Melting</h2>
+                    <p class="content">Climate change has caused global temperatures to slowly
+                        rise. These rising temperatures have led to the melting of ice in Earth's polar
+                        regions. <br><br>Ice reflects the sun's light back into space. So, as more ice melts, even more
+                        heat will stay on Earth, contributing further to climate change. <br><br>In addition, as more ice melts,
+                        the sea level will rise, changing Earth's coastlines.
+                    </p>
+                </div>
+                <div class="grid-item" id="NASA">
+                    <div class="container">
+                        <img src="./nasa.png" alt="NASA Logo" id="nasa">
+                        <div class="overlay">
+                            <div class="content" id="overlay-text">
+                                NASA, or the National Aeronautics and Space Administration,
+                                uses satellites such as GRACE to track the melting of ice sheets in Earth's
+                                polar regions. NASA's satellites use lasers to measure ice sheet mass. This mass
+                                has been in decline over the past few decades due to ice melting.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="graph">
+                    <img src="./LandIceAntarctica.png" alt="NASA GRACE Antarctica Data">
+                </div>
+        </div>
+
+        <div id="main-bottom">
+            <h2>Ice Sheet Information</h2>
+            <div class="grid-item2" id="greenland">
+                <h3>Greenland Ice Sheet</h3>
+                <p class="content">The Greenland ice sheet is a large ice sheet that makes up
+                    79% of the surface of Greenland. The ice sheet is massive, at over 1.7 million square
+                    kilometers, and 2-3 kilometers thick. This makes the Greenland ice sheet the second largest body of ice on Earth.
+                    If this sheet melted completely, sea levels would rise by about 7.2 meters.
+                </p>
+            </div>
+
+            <div class="grid-item2" id="antarctic">
+                <h3>Antarctic Ice Sheet</h3>
+                <p class="content">
+                    The Antarctic ice sheet is the largest ice sheet on Earth, taking up more than
+                    14 million square kilometers, and being approximately 2 kilometers thick. If this ice
+                    sheet melted completely, sea levels would rise by 60 meters.
+                </p>
+            </div>
+
+            <div class="grid-item2" id="other">
+                <h3>Other Ice Sheet Information</h3>
+                <p class="content">
+                    As ice sheets melt, they release fresh water into the ocean, changing the ocean's
+                    salinity levels. This could have devastating effects on corals and other marine organisms,
+                    who depend on saltwater to survive.
+                </p>
+            </div>
+        </div>
+    </div>

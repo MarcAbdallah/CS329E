@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>HWK 9</title>
+	<link rel="stylesheet" href="./travel_show.css">
+</head>
+<body class="vsc-initialized">
+<h1>Travel Show</h1>
+<img src="./agra_fort.jpg" alt="Slide Show" id="slideshow"><br>
+<span id="caption">Agra Fort</span>
+<script type="text/javascript">
+  let space = new Array();
+  space[0] = "./agra_fort.jpg";
+  space[1] = "./ajanta_ellora.jpeg";
+  space[2] = "./akshardham_temple.jpg";
+  space[3] = "./gateway_of_india.jpg";
+  space[4] = "./hawa_mahal.jpeg";
+  space[5] = "./mehrangarh_fort.jpg";
+  space[6] = "./mysore_palace.jpeg";
+  space[7] = "./qutub_minar.jpg";
+  space[8] = "./sun_temple.jpg";
+  space[9] = "./taj_mahal.jpeg";
+  space[10] = "./victoria_memorial.jpg";
+
+  let cap = new Array();	
+  cap[0] = "Agra Fort";
+  cap[1] = "Ajanta Ellora";
+  cap[2] = "Akshardham Temple";
+  cap[3] = "Gateway of India";
+  cap[4] = "Hawa Mahal";
+  cap[5] = "Mehrangarh Fort";
+  cap[6] = "Mysore Palace";
+  cap[7] = "Qutub Minar";
+  cap[8] = "Sun Temple";
+  cap[9] = "Taj Mahal";
+  cap[10] = "Victoria Memorial Hall";
+
+  var image_index = 0;
+
+  function slideshow(){
+  	slide = setInterval(change_image, 3000);
+  }
+
+
+  function change_image(){
+	if (image_index < (space.length - 1)){
+		image_index++;
+	}
+	else{
+		image_index = 0;
+	}
+       document.getElementById("slideshow").src = space[image_index];
+       document.getElementById("caption").innerHTML = cap[image_index];
+  }
+
+  slideshow();
+
+</script>
+
+
+
+
+</body></html>

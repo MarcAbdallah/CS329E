@@ -1,0 +1,243 @@
+
+/* 
+  File: hwk5.css
+
+  Author: Marc Abdallah
+
+  Date created: 23 Jun 2021
+*/
+
+html {
+  margin: 2px;
+  padding: 2px;
+}
+
+body {
+  margin: 2px;
+  padding: 2px;
+  color: #555555;
+  background-color: #EDEDED;
+  font-family: Georgia, Verdana, Geneva, Arial, sans-serif;
+  font-size: small;
+  line-height: 200%;
+}
+
+.header {
+  top: 0px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;
+  border-bottom: 2px solid black;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 50pt;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  vertical-align: middle;
+  color: #800000;
+}
+
+h2 {
+    font-size: large;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+}
+
+
+#top a {
+	color: #333333;
+	text-decoration: none;
+}
+
+#top a:visited{
+	color: #555555;
+}
+
+#top a:hover{
+	color: black;
+}
+
+.header p{
+	font-size: small;
+	text-align: center;
+	vertical-align: middle;
+	color: #000000;
+}
+
+.navCol {
+  position: absolute;
+  top: 150px;
+  left: 0%;
+  width: 10%;
+  margin: 2px;
+  padding-left: 30px;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 20px;
+}
+
+.navCol div{
+	padding-bottom: 30px;
+	border: 1px solid grey;
+	text-align: center;
+	position: relative;
+	min-height: 20px;
+	color: #800000;
+	background-color: #A2A2A2;
+}
+
+.navCol div:hover{
+	border: 1px solid black;
+	background-color: #979797;
+	cursor: pointer;
+}
+
+.navCol div a{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	line-height: normal;
+	text-decoration: none;
+	font-size: medium;
+}
+
+
+.adCol {
+  position: absolute;
+  top: 150px;
+  left: 78%;
+  width: 20%;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  text-align: center;
+  font-size: small;
+  line-height: normal;
+ }
+
+img{
+	height: 150px;
+	display: block;
+	margin: auto;
+	background: black;
+	border: 3px solid black;
+}
+
+#toowide{
+	height: 130px;
+	width: 170px;
+}
+
+figcaption{
+	text-align: center;
+	line-height: normal;
+	padding-bottom: 20px;
+}
+
+
+.adCol a{
+	text-align: center;
+	text-decoration: none;
+}
+
+.adCol a:hover, .headlines a:hover{
+	color: black;
+} 
+
+.headlines {
+  position: absolute;
+  top: 152px;
+  left: 15%;
+  width: 60%;
+  margin: 2px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+  height: 650px;
+}
+
+
+#top h3{
+	padding-bottom: 120px;
+}
+
+
+#head{
+	position: absolute;
+	left: 0%;
+	width: 45%;
+	padding-left: 30px;
+}
+
+
+#headline-pic{
+	position: absolute;
+	left: 50%;
+	width: 45%;
+}
+
+#headline-pic img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#top{
+	border-bottom: 1px solid grey;
+}
+
+#bottom{
+	position: absolute;
+	top: 750px;
+	border-top: 1px solid grey;
+
+}
+table{
+	table-layout: fixed;
+	width: 100%;
+}
+
+
+tr td p {
+	font-size: x-small;
+	line-height: normal;
+	text-align: center;
+}
+
+thead{
+	font-weight: bold;
+	text-align: center;
+}
+
+
+
+.footer {
+  position: absolute;
+  top: 1300px;
+  text-align: left;
+  width: 50%;
+  padding: 2px;
+  border-top: 1px double black;
+  border-bottom: 1px solid black;
+}
+
+
+a:link{
+	color: #800000;
+}
+
+a:visited{
+	color: #900000;
+}
+
+
+

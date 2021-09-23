@@ -1,0 +1,42 @@
+
+<script>
+	function gradeQuiz(event){
+		//checking true/false
+		var q1 = new Array(document.getElementById('q1true').checked, document.getElementById('q1false').checked);
+		var q2 = new Array(document.getElementById('q2true').checked, document.getElementById('q2false').checked);
+
+		//checking multiple choice
+		var q3 = new Array(document.querySelector('#q3a:checked'), document.querySelector('#q3b:checked'), document.querySelector('#q3c:checked'), document.querySelector('#q3d:checked'));
+		
+		var q4 = new Array(document.querySelector('#q4a:checked'), document.querySelector('#q4b:checked'), document.querySelector('#q4c:checked'), document.querySelector('#q4d:checked'));
+
+
+		//checking free response
+		let q5 = document.forms["quiz"]["q5"].value;
+		let q6 = document.forms["quiz"]["q6"].value;
+		
+		var answered = 1;
+		if ((q1[0] == false && q1[1] == false) || (q2[0] == false && q2[1] == false)){answered = 0;}
+		if ((q3[0] === null && q3[1] === null && q3[2] === null && q3[3] === null) || (q4[0] === null && q4[1] === null && q4[2] === null && q4[3] === null)){answered = 0;}
+		if (q5 == "" || q6 == ""){answered = 0;}
+
+		if (answered == 0){window.alert('Please answer all questions'); event.preventDefault();}
+		else{grade(q1, q2, q3, q4, q5, q6)}
+
+	}
+
+	function grade(q1, q2, q3, q4, q5, q6){
+		var correct = 0;
+		if (q1[1] == true){correct++;}
+		if(q2[0] == true){correct++;}
+
+		if (q3[0] === null && q3[1] !== null && q3[2] === null && q3[3] === null){correct++;}
+		if (q4[0] === null && q4[1] === null && q4[2] === null && q4[3] !== null){correct++;}
+
+
+
+		if (q5.toLowerCase() == "galaxy"){correct++;}
+		if (q6.toLowerCase() == "age"){correct++;}
+		window.alert("Your grade is " + correct + "/6");
+	}
+</script>

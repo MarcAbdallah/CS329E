@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>HWK 10</title>
+	<link rel="stylesheet" href="./hwk10.css">
+	<meta charset="UTF-8">
+</head>
+<body class="vsc-initialized">
+	<h1>Astronomy Quiz</h1>
+	<form action="" onsubmit="gradeQuiz(event)" method="POST" name="quiz">
+		<p><strong>Q1)</strong> According to Kepler the orbit of the earth is a circle with the sun at the center</p>
+		<input type="radio" id="q1true" name="q1" value="True">
+		<label for="q1true">True</label>
+		<input type="radio" id="q1false" name="q1" value="False">
+		<label for="q1false">False</label>
+
+		<p><strong>Q2)</strong> Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax</p>
+		<input type="radio" id="q2true" name="q2" value="True">
+		<label for="q2true">True</label>
+		<input type="radio" id="q2false" name="q2" value="False">
+		<label for="q2false">False</label>
+
+		<p><strong>Q3)</strong> The total amount of energy that a star emits is directly related to its</p>
+		<input type="checkbox" id="q3a" name="q3a" value="a">
+		<label for="q3a"> surface gravity and magnetic field</label><br>
+		<input type="checkbox" id="q3b" name="q3b" value="b">
+		<label for="q3b"> radius and temperature</label><br>
+		<input type="checkbox" id="q3c" name="q3c" value="c">
+		<label for="q3c"> pressure and volume</label><br>
+		<input type="checkbox" id="q3d" name="q3d" value="d">
+		<label for="q3d"> location and velocity</label><br>
+
+		<p><strong>Q4)</strong> Stars that live the longest have</p>
+		<input type="checkbox" id="q4a" name="q4a" value="a">
+		<label for="q4a"> high mass</label><br>
+		<input type="checkbox" id="q4b" name="q4b" value="b">
+		<label for="q4b"> high temperature</label><br>
+		<input type="checkbox" id="q4c" name="q4c" value="c">
+		<label for="q4c"> lots of hydrogen</label><br>
+		<input type="checkbox" id="q4d" name="q4d" value="d">
+		<label for="q4d"> small mass</label><br>
+
+		<p><strong>Q5)</strong> A collection of a hundred billion stars, gas, and dust is called a <span><input type="text" id="q5" name="q5" size="10"></span></p>
+		<p><strong>Q6)</strong> The inverse of the Hubble's constant is a measure of the <span><input type="text" id="q6" name="q6" size="7"></span> of the universe</p>
+		<button type="submit" value="Submit" class="button">Submit</button>
+  		<button type="reset" value="Clear" class="button">Clear</button>
+	</form>
+
+
+<script>
+	function gradeQuiz(event){
+		//checking true/false
+		var q1 = new Array(document.getElementById('q1true').checked, document.getElementById('q1false').checked);
+		var q2 = new Array(document.getElementById('q2true').checked, document.getElementById('q2false').checked);
+
+		//checking multiple choice
+		var q3 = new Array(document.querySelector('#q3a:checked'), document.querySelector('#q3b:checked'), document.querySelector('#q3c:checked'), document.querySelector('#q3d:checked'));
+		
+		var q4 = new Array(document.querySelector('#q4a:checked'), document.querySelector('#q4b:checked'), document.querySelector('#q4c:checked'), document.querySelector('#q4d:checked'));
+
+
+		//checking free response
+		let q5 = document.forms["quiz"]["q5"].value;
+		let q6 = document.forms["quiz"]["q6"].value;
+		
+		var answered = 1;
+		if ((q1[0] == false && q1[1] == false) || (q2[0] == false && q2[1] == false)){answered = 0;}
+		if ((q3[0] === null && q3[1] === null && q3[2] === null && q3[3] === null) || (q4[0] === null && q4[1] === null && q4[2] === null && q4[3] === null)){answered = 0;}
+		if (q5 == "" || q6 == ""){answered = 0;}
+
+		if (answered == 0){window.alert('Please answer all questions'); event.preventDefault();}
+		else{grade(q1, q2, q3, q4, q5, q6)}
+
+	}
+
+	function grade(q1, q2, q3, q4, q5, q6){
+		var correct = 0;
+		if (q1[1] == true){correct++;}
+		if(q2[0] == true){correct++;}
+
+		if (q3[0] === null && q3[1] !== null && q3[2] === null && q3[3] === null){correct++;}
+		if (q4[0] === null && q4[1] === null && q4[2] === null && q4[3] !== null){correct++;}
+
+
+
+		if (q5.toLowerCase() == "galaxy"){correct++;}
+		if (q6.toLowerCase() == "age"){correct++;}
+		window.alert("Your grade is " + correct + "/6");
+	}
+</script>
+
+
+
+
+</body></html>

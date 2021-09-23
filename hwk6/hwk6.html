@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>Mortgage Calculator</title>
+<link rel="stylesheet" type="text/css" href="./mortgage.css">
+</head>
+
+<body class="vsc-initialized">
+<h1>Mortgage Calculator</h1>
+<form id="addForm" action="" method="post">
+<table border="0">
+<tbody><tr>
+<td>Principal Amount</td>
+<td>
+  <input type="text" name="P" size="20">
+</td>
+</tr>
+<tr>
+<td>Yearly Percentage Interest Rate</td>
+<td>
+  <input type="text" name="r" size="20">
+</td>
+</tr>
+<tr>
+<td>Loan Term (Months)</td>
+<td>
+  <input type="text" name="n" size="20">
+</td>
+</tr>
+<tr>
+<td>Monthly Payment:</td>
+<td>
+  <input type="text" name="monthly" value="" size="20">
+</td>
+<td>Total Payment:</td>
+<td>
+  <input type="text" name="total" value="" size="20">
+</td>
+<td>Total Interest Paid:</td>
+<td>
+  <input type="text" name="interest" value="" size="20">
+</td>
+</tr>
+<input type="button" class="button" name="calculate" value="Calculate">
+<input type="reset" class="button" value="Clear">
+</tbody></table>
+</form>
+<script type="text/javascript">
+   function calc ()
+   {
+     let sum = "";
+     let elt = document.getElementById("addForm");
+     let P = parseFloat (elt.P.value);
+     let r = parseFloat (elt.r.value) / 1200;
+     let n = parseInt (elt.n.value);
+     answer = P * r / (1 - (1 / ((1 + r)**n)));
+     answer = answer.toFixed(2);
+     elt.monthly.value = answer;
+     elt.total.value = (answer * n).toFixed(2);
+     elt.interest.value = ((answer * n) - P).toFixed(2);
+   }
+
+  document.getElementById("addForm").calculate.onclick = validate;
+  function validate ()
+  {
+
+    let elt = document.getElementById("addForm");
+    let P = parseFloat (elt.P.value);
+    let r = parseFloat (elt.r.value) / 1200;
+    let n = parseInt (elt.n.value);
+    if (isNaN(P) || isNaN(r) || isNaN(n) || P < 0 || r < 0 || n < 0)
+    {
+      window.alert ("Not a valid number");
+      return false;
+    }
+    calc() 
+    return true;
+  }
+
+
+</script>
+
+
+
+</body></html>

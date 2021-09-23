@@ -1,0 +1,74 @@
+#body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: whitesmoke;
+}
+
+#header{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+
+}
+
+.button{
+    color: black;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.button:hover{
+    background-color: #EEEEEE;
+}
+
+.button:active{
+    background-color: #DDDDDD;
+}
+
+#buttons{
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    top: 530px;
+}
+
+#result{
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    top: 560px;
+}
+
+h1{
+    padding-bottom: 0px;
+    margin: 5px;
+}
+
+#pieces{
+    position: absolute;
+    top: 420px;
+    left: 50%;
+    margin: 0 0 0 -600px;
+}
+
+#puzzle{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin: 0 0 0 -200px;
+}
+
+#timer{
+    position: absolute;
+    top: 150px;
+    left: 2%;
+    align-items: center;
+    text-align: center;
+}
+
+#time{
+    font-size: larger;
+}

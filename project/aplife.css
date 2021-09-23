@@ -1,0 +1,319 @@
+#top {
+	position: absolute;
+	top: 250px;
+}
+ #terrains {
+	border: 3px solid #227788;
+	position: absolute;
+	top: 925px;
+	left: 20px;
+	padding: 20px;
+	border-radius: 25px;
+	width: 95%;
+}
+.box {
+	background: #328899;
+        position: relative;
+        width: 910px;
+        height: 130px;
+        text-align: center;
+	border: 2px solid #227788;
+        left: 250px;
+	border-radius: 25px;
+}
+
+.bullet {
+	background: #328899;
+	 position: relative;
+	 border: 2px solid #227788;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+	right: 730px;
+}
+.terrain { 
+	position: absolute;
+            top: 10%;
+  width: 90%;
+  left: 85px;
+  text-align: center; 
+  font-size: 12pt;
+  }
+
+.number {
+	text-align: center;
+	top: 37%;
+	position: absolute;
+	width: 100%;
+	font-size: 20pt;
+	font-weight: bold;
+}
+#species {
+	position: absolute;
+        border: 3px solid #227788;
+        border-radius: 25px;
+        padding: 15px;
+        top: 625px;
+        width: 96%;
+        margin: 10px;
+}
+
+#block1 {
+	background: #328899;
+  	position: relative;
+    	width: 150px;
+    	height: 150px;
+	text-align: center;
+	left: 100px;
+}
+
+#filefish {
+	position: absolute;
+            top: 20%;
+  width: 100%;
+  font-size: 18pt;
+  text-align: center;
+  font-weight: bold;
+  }
+
+.speciesblock {
+	    position: absolute;
+	    top: 30%;
+  width: 100%;
+  font-size: 18pt;
+  text-align: center;
+  font-weight: bold;
+}
+
+#block2 {
+        background: #328899;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        left: 150px;
+}
+
+#block3{
+        background: #328899;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        left: 200px;
+}
+
+
+
+#block4 {
+        background: #328899;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        left: 250px;
+}
+
+
+#block5 {
+        background: #328899;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        left: 300px;
+}
+#block6 {
+
+        background: #328899;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        left: 350px;
+}
+
+#slides{
+    grid-row: 1;
+    grid-column: 1;
+}
+.slideshow-container {
+  position: absolute;
+  right: 10px;
+  bottom: 3px;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot-container{
+    position: absolute;
+    top: 360px;
+    left: 75vw;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.slideshow-container img{
+    height: 350px;
+    width: 42vw;
+    border-radius: 10px;
+}
+
+.container {
+    position: absolute;
+    top: 420px;
+    width: 48vw;
+  }
+#explanation {
+	font-size: 16pt;
+}
+
+#affected {
+	border: 3px solid #227788;
+	border-radius: 25px;
+	margin: 10px;
+	padding: 10px;
+	width: 50%;
+}
+
+h3 {
+	font-size: 17pt;
+}
+body{
+    background-color: #AACCDD;
+    font-family: Tahoma, sans-serif;
+    padding-bottom: 50px;
+    animation: launch ease 0.5s;
+}
+
+#banner{
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#background-banner{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 0;
+    width: 100vw;
+    background-color: #328899;
+    border: 4px solid #227788;
+    height: 120px;
+}
+
+#green-team{
+    position: absolute;
+    top: 40px;
+    left: 15vw;
+    z-index: 3;
+}
+
+#class-name{
+    position: absolute;
+    top: 40px;
+    left: 65vw;
+    z-index: 3;
+}
+
+#logo{
+    position: absolute;
+    left: calc(50vw - 50px);
+    top: 10px;
+    z-index: 1;
+    width: 100px;
+}
+
+#navigation{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    top: 150px;
+    left: 0;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    font-size: larger;
+    height: 50px;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16.67vw;
+    height: 50px;
+    border: 2px solid #227788;
+    background-color: #42AABB;
+    cursor: pointer;
+}
+
+.nav:hover{
+    background-color: #227788;
+	transform:scale3d(1.1,1.1,1);
+	transition:transform ease 0.5s,color 0.5s,background-color 0.5s;
+}
+
+a img:hover{
+    transform:scale3d(1.1,1.1,1);
+	transition:transform ease 0.5s,color 0.5s,background-color 0.5s; 
+}
